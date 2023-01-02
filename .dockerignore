@@ -1,0 +1,8 @@
+node_modules
+Dockerfile
+.dockerignore
+.github/
+deployment/
+helm/
+VERSION
+README.md
