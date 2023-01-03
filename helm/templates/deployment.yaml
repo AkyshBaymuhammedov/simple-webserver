@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: {{ include "simple-webserver.fullname" . }}
   labels:
+{{- with .Values.labels }}
+{{ toYaml . | indent 4 }}
+{{- end }}
     {{- include "simple-webserver.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
