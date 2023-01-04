@@ -17,3 +17,4 @@ jobs:
       ACR_PASSWORD: ${{ secrets.ACR_PASSWORD }}
       ACR_REGISTRY: ${{ secrets.ACR_REGISTRY }}
       AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+      KEY_VAULT: ${{ secrets.KEY_VAULT }}
