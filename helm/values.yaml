@@ -29,17 +29,14 @@ labels:
   app: simple-webserver
 
 podSecurityContext:
-  {}
-  # fsGroup: 2000
+  fsGroup: 2000
 
 securityContext:
-  {}
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
+  capabilities:
+  drop:
+    - ALL
+  runAsNonRoot: true
+  runAsUser: 1000
 
 service:
   type: ClusterIP
@@ -50,7 +47,7 @@ ingress:
   enabled: true
   className: 'nginx'
   annotations:
-    nginx.org/mergeable-ingress-type: "minion"
+    nginx.org/mergeable-ingress-type: 'minion'
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:

@@ -6,6 +6,9 @@ COPY package.json ./
 COPY package-lock.json ./
 RUN npm install
 
-COPY . ./
+RUN mkdir -p node_modules/.cache && chown -R node:node node_modules/.cache
 
+COPY --chown=node . ./
+
+USER 1000
 CMD ["node", "app.js"]
