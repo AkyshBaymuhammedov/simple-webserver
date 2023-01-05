@@ -4,7 +4,8 @@
   "description": "A simple REST API with single endpoint which responds with 200 success for any GET requests",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Akysh Baymuhammedov",
   "license": "ISC",
